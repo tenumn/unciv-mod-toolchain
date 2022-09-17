@@ -6,24 +6,23 @@ let _local: any = {};
 let _isInit: boolean = false;
 
 export class Unciv {
-	constructor() {
-		mkdir(join(this.path, "Images"));
-		mkdir(join(this.path, "jsons"));
-		mkdir(join(this.path, "translations"));
+	constructor(root: string) {
+		let _image = join(root, "Images");
+		mkdir(_image);
+		let _json = join(root, "jsons");
+		mkdir(_json);
 
 		this.dataGen();
         if(!_isInit) {
             for (let name in _local) {
                 if (name != "noWrite") {
                     let json = JSON.stringify(_local[name], null, 4);
-                    writeFileSync(join(this.path, "jsons", `${name}.json`), json);
+                    writeFileSync(join(_json, `${name}.json`), json);
                 }
             }
             _isInit = true;
         }
 	}
-
-	readonly path: string = join(__dirname, "..");
 
 	public register(state: Registry): void {
 		(_local[state._name] ??= []).push(state._json);

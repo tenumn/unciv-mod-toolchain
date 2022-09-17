@@ -51,8 +51,16 @@ export class VictoryType extends Registry {
 	 * @param isHidden
 	 * @returns
 	 */
-	public hiddenInVictoryScreen(isHidden: boolean): VictoryType {
+	public isHidden(isHidden: boolean): VictoryType {
 		this.put("hiddenInVictoryScreen", isHidden);
 		return this;
 	}
+}
+
+export namespace VictoryType {
+	export const Scientific = new VictoryType('Scientific');
+	export const Cultural = new VictoryType('Cultural');
+	export const Domination = new VictoryType('Domination');
+	export const Diplomatic = new VictoryType('Diplomatic');
+	export const Time = new VictoryType('Time');
 }

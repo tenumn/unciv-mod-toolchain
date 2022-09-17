@@ -1,18 +1,17 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.Registry = void 0;
-var Registry = /** @class */ (function () {
-    function Registry(name) {
+class Registry {
+    constructor(name) {
         this._json = {};
         this._name = name;
     }
-    Registry.prototype.put = function (name, data) {
+    put(name, data) {
         this._json[name] = data;
         return this;
-    };
-    Registry.prototype.get = function (name) {
+    }
+    get(name) {
         return typeof name == "string" ? this._json[name] : this._json;
-    };
-    return Registry;
-}());
+    }
+}
 exports.Registry = Registry;
