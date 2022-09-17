@@ -7,13 +7,11 @@ let _isInit: boolean = false;
 
 export class Unciv {
 	constructor(root: string) {
-		let _image = join(root, "Images");
-		mkdir(_image);
-		let _json = join(root, "jsons");
-		mkdir(_json);
-
 		this.dataGen();
         if(!_isInit) {
+			let _json = join(root, "jsons");
+			if (!existsSync(_json)) mkdirSync(_json);
+
             for (let name in _local) {
                 if (name != "noWrite") {
                     let json = JSON.stringify(_local[name], null, 4);
@@ -29,12 +27,6 @@ export class Unciv {
 	}
 
 	public dataGen(): void {}
-}
-
-function mkdir(path: string) {
-	if (!existsSync(path)) {
-		mkdirSync(path);
-	}
 }
 
 export * from "./api/Belief";

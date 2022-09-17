@@ -21,12 +21,11 @@ var _local = {};
 var _isInit = false;
 var Unciv = /** @class */ (function () {
     function Unciv(root) {
-        var _image = (0, path_1.join)(root, "Images");
-        mkdir(_image);
-        var _json = (0, path_1.join)(root, "jsons");
-        mkdir(_json);
         this.dataGen();
         if (!_isInit) {
+            var _json = (0, path_1.join)(root, "jsons");
+            if (!(0, fs_1.existsSync)(_json))
+                (0, fs_1.mkdirSync)(_json);
             for (var name_1 in _local) {
                 if (name_1 != "noWrite") {
                     var json = JSON.stringify(_local[name_1], null, 4);
@@ -45,11 +44,6 @@ var Unciv = /** @class */ (function () {
     return Unciv;
 }());
 exports.Unciv = Unciv;
-function mkdir(path) {
-    if (!(0, fs_1.existsSync)(path)) {
-        (0, fs_1.mkdirSync)(path);
-    }
-}
 __exportStar(require("./api/Belief"), exports);
 __exportStar(require("./api/Building"), exports);
 __exportStar(require("./api/Leader"), exports);
