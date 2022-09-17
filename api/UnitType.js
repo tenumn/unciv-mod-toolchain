@@ -1,30 +1,48 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+exports.__esModule = true;
 exports.UnitType = void 0;
-const Registry_1 = require("./Registry");
-class UnitType extends Registry_1.Registry {
-    constructor(name) {
-        super("UnitTypes");
-        this.put("name", name);
-        this.movement("Air");
+var Registry_1 = require("./Registry");
+var UnitType = /** @class */ (function (_super) {
+    __extends(UnitType, _super);
+    function UnitType(name) {
+        var _this = _super.call(this, "UnitTypes") || this;
+        _this.put("name", name);
+        _this.movement("Air");
+        return _this;
     }
     /**
      * 移动类型
      * @param type
      * @returns
      */
-    movement(type) {
+    UnitType.prototype.movement = function (type) {
         this.put("movementType", type);
         return this;
-    }
+    };
     /**
      * 添加特质
      * @param unique
      * @returns
      */
-    unique(unique) {
+    UnitType.prototype.unique = function (unique) {
         this.put("uniques", unique.get("uniques"));
         return this;
-    }
-}
+    };
+    return UnitType;
+}(Registry_1.Registry));
 exports.UnitType = UnitType;

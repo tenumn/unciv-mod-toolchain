@@ -20,17 +20,17 @@ var path_1 = require("path");
 var _local = {};
 var _isInit = false;
 var Unciv = /** @class */ (function () {
-    function Unciv() {
-        this.path = (0, path_1.join)(__dirname, "..");
-        mkdir((0, path_1.join)(this.path, "Images"));
-        mkdir((0, path_1.join)(this.path, "jsons"));
-        mkdir((0, path_1.join)(this.path, "translations"));
+    function Unciv(root) {
+        var _image = (0, path_1.join)(root, "Images");
+        mkdir(_image);
+        var _json = (0, path_1.join)(root, "jsons");
+        mkdir(_json);
         this.dataGen();
         if (!_isInit) {
             for (var name_1 in _local) {
                 if (name_1 != "noWrite") {
                     var json = JSON.stringify(_local[name_1], null, 4);
-                    (0, fs_1.writeFileSync)((0, path_1.join)(this.path, "jsons", "".concat(name_1, ".json")), json);
+                    (0, fs_1.writeFileSync)((0, path_1.join)(_json, "".concat(name_1, ".json")), json);
                 }
             }
             _isInit = true;
