@@ -13,10 +13,10 @@ var __createBinding = (this && this.__createBinding) || (Object.create ? (functi
 var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.Unciv = void 0;
-var path_1 = require("path");
-var Registry_1 = require("./api/Registry");
+const path_1 = require("path");
+const Registry_1 = require("./api/Registry");
 function Unciv(dataGen) {
     dataGen();
     Registry_1.Registry.write((0, path_1.join)(__dirname, "..", "..", "jsons"));

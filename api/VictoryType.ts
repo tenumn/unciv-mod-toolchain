@@ -56,11 +56,3 @@ export class VictoryType extends Registry {
 		return this;
 	}
 }
-
-export namespace VictoryType {
-	export const Scientific = new VictoryType('Scientific');
-	export const Cultural = new VictoryType('Cultural');
-	export const Domination = new VictoryType('Domination');
-	export const Diplomatic = new VictoryType('Diplomatic');
-	export const Time = new VictoryType('Time');
-}

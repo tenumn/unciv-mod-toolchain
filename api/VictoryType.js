@@ -54,10 +54,3 @@ class VictoryType extends Registry_1.Registry {
     }
 }
 exports.VictoryType = VictoryType;
-(function (VictoryType) {
-    VictoryType.Scientific = new VictoryType('Scientific');
-    VictoryType.Cultural = new VictoryType('Cultural');
-    VictoryType.Domination = new VictoryType('Domination');
-    VictoryType.Diplomatic = new VictoryType('Diplomatic');
-    VictoryType.Time = new VictoryType('Time');
-})(VictoryType = exports.VictoryType || (exports.VictoryType = {}));
