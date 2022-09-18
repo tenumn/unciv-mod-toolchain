@@ -15,34 +15,12 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 exports.__esModule = true;
 exports.Unciv = void 0;
-var fs_1 = require("fs");
 var path_1 = require("path");
-var _local = {};
-var _isInit = false;
-var Unciv = /** @class */ (function () {
-    function Unciv(root) {
-        this.dataGen();
-        if (!_isInit) {
-            var _json = (0, path_1.join)(root, "jsons");
-            if (!(0, fs_1.existsSync)(_json))
-                (0, fs_1.mkdirSync)(_json);
-            for (var name_1 in _local) {
-                if (name_1 != "noWrite") {
-                    var json = JSON.stringify(_local[name_1], null, 4);
-                    (0, fs_1.writeFileSync)((0, path_1.join)(_json, "".concat(name_1, ".json")), json);
-                }
-            }
-            _isInit = true;
-        }
-    }
-    Unciv.prototype.register = function (state) {
-        var _a;
-        var _b;
-        ((_a = _local[_b = state._name]) !== null && _a !== void 0 ? _a : (_local[_b] = [])).push(state._json);
-    };
-    Unciv.prototype.dataGen = function () { };
-    return Unciv;
-}());
+var Registry_1 = require("./api/Registry");
+function Unciv(dataGen) {
+    dataGen();
+    Registry_1.Registry.write((0, path_1.join)(__dirname, "..", "..", "jsons"));
+}
 exports.Unciv = Unciv;
 __exportStar(require("./api/Belief"), exports);
 __exportStar(require("./api/Building"), exports);
