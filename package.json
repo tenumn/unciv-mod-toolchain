@@ -1,6 +1,6 @@
 {
   "name": "unciv-mod-toolchain",
-  "version": "1.0",
+  "version": "1.0.1",
   "author": "MS_maisui",
   "main": "unciv.js",
   "scripts": {
