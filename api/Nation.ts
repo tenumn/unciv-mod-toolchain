@@ -41,7 +41,9 @@ export class Nation extends Registry {
 	 * @returns
 	 */
 	public adjective(...adjective: string[]): Nation {
-		this.put("adjective", adjective);
+		let adjectives: string[] = this.get("adjective") || [];
+		adjectives.push(...adjective);
+		this.put("adjective", adjectives);
 		return this;
 	}
 
@@ -62,7 +64,7 @@ export class Nation extends Registry {
 	public addCitie(...citie: string[]): Nation {
 		let cities: string[] = this.get("cities") || [];
 		cities.push(...citie);
-		this.put("adjective", cities);
+		this.put("cities", cities);
 		return this;
 	}
 }

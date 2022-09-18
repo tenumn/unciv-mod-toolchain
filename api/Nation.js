@@ -40,7 +40,9 @@ class Nation extends Registry_1.Registry {
      * @returns
      */
     adjective(...adjective) {
-        this.put("adjective", adjective);
+        let adjectives = this.get("adjective") || [];
+        adjectives.push(...adjective);
+        this.put("adjective", adjectives);
         return this;
     }
     /**
@@ -59,7 +61,7 @@ class Nation extends Registry_1.Registry {
     addCitie(...citie) {
         let cities = this.get("cities") || [];
         cities.push(...citie);
-        this.put("adjective", cities);
+        this.put("cities", cities);
         return this;
     }
 }
