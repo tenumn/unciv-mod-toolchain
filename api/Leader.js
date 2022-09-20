@@ -11,6 +11,7 @@ class Leader extends Registry_1.Registry {
             : preVictoryType);
     }
     /**
+     * @zh
      * 设置启动介绍
      * @param text1
      * @param text2
@@ -21,6 +22,7 @@ class Leader extends Registry_1.Registry {
         return this;
     }
     /**
+     * @zh
      * 宣战信息
      * @param text
      * @returns
@@ -30,6 +32,7 @@ class Leader extends Registry_1.Registry {
         return this;
     }
     /**
+     * @zh
      * 攻击信息
      * @param text
      * @returns
@@ -39,6 +42,7 @@ class Leader extends Registry_1.Registry {
         return this;
     }
     /**
+     * @zh
      * 击败信息
      * @param text
      * @returns
@@ -48,6 +52,7 @@ class Leader extends Registry_1.Registry {
         return this;
     }
     /**
+     * @zh
      * 介绍信息
      * @param text
      * @returns
@@ -57,6 +62,7 @@ class Leader extends Registry_1.Registry {
         return this;
     }
     /**
+     * @zh
      * 设置问候信息
      * @param text
      * @returns
@@ -69,6 +75,7 @@ class Leader extends Registry_1.Registry {
         return this;
     }
     /**
+     * @zh
      * 贸易请求
      * @param text
      * @returns
@@ -78,6 +85,7 @@ class Leader extends Registry_1.Registry {
         return this;
     }
     /**
+     * @zh
      * 添加特质
      * @param unique
      * @returns

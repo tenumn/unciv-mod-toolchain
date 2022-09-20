@@ -5,6 +5,7 @@ const Leader_1 = require("./Leader");
 const Registry_1 = require("./Registry");
 class Building extends Registry_1.Registry {
     /**
+     * @zh
      * 注册建筑
      * @param name
      */
@@ -13,6 +14,7 @@ class Building extends Registry_1.Registry {
         this.put("name", name);
     }
     /**
+     * @zh
      * 生产力消耗
      * @param cost
      * @returns
@@ -22,7 +24,8 @@ class Building extends Registry_1.Registry {
         return this;
     }
     /**
-     * 文明独特建筑
+     * @zh
+     * 单一文明专属
      * @param leader
      */
     uniqueTo(leader) {
@@ -35,6 +38,7 @@ class Building extends Registry_1.Registry {
         return this;
     }
     /**
+     * @zh
      * 是否是奇观
      * @param isWonder
      * @param isNational
@@ -49,6 +53,7 @@ class Building extends Registry_1.Registry {
         return this;
     }
     /**
+     * @zh
      * 前置建筑
      */
     required(building) {

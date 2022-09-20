@@ -8,6 +8,7 @@ class Unique extends Registry_1.Registry {
         this.put("uniqueName", name);
     }
     /**
+     * @zh
      * 添加特质
      * @param unique
      * @returns

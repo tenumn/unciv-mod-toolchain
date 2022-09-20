@@ -9,6 +9,7 @@ class UnitType extends Registry_1.Registry {
         this.movement("Air");
     }
     /**
+     * @zh
      * 移动类型
      * @param type
      * @returns
@@ -18,6 +19,7 @@ class UnitType extends Registry_1.Registry {
         return this;
     }
     /**
+     * @zh
      * 添加特质
      * @param unique
      * @returns

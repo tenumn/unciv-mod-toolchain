@@ -1,9 +1,11 @@
+import { existsSync, mkdirSync } from "fs";
 import { join } from "path";
-import { Registry } from "./api/Registry";
+import { emitter, Registry } from "./api/Registry";
 
 export function Unciv(dataGen: () => void) {
 	dataGen();
-	Registry.write(join(__dirname, "..", "..", "jsons"));
+	emitter.emit("preload");
+	emitter.emit('write-json');
 }
 
 export * from "./api/Belief";

@@ -8,6 +8,7 @@ class VictoryType extends Registry_1.Registry {
         this.put("name", name);
     }
     /**
+     * @zh
      * 设置胜利介绍
      * @param text
      * @returns
@@ -17,6 +18,7 @@ class VictoryType extends Registry_1.Registry {
         return this;
     }
     /**
+     * @zh
      * 设置胜利条件
      * @param part
      * @returns
@@ -26,6 +28,7 @@ class VictoryType extends Registry_1.Registry {
         return this;
     }
     /**
+     * @zh
      * 设置胜利信息
      * @param text
      * @returns
@@ -35,6 +38,7 @@ class VictoryType extends Registry_1.Registry {
         return this;
     }
     /**
+     * @zh
      * 设置失败信息
      * @param text
      * @returns
@@ -44,6 +48,7 @@ class VictoryType extends Registry_1.Registry {
         return this;
     }
     /**
+     * @zh
      * 是否在胜利选项中显示
      * @param isHidden
      * @returns

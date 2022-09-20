@@ -9,6 +9,7 @@ export declare type BeliefType =
 
 export class Belief extends Registry {
 	/**
+	 * @zh
 	 * 注册信仰
 	 * @param name
 	 * @param type
@@ -19,6 +20,7 @@ export class Belief extends Registry {
 	}
 
 	/**
+	 * @zh
 	 * 添加特质
 	 * @param unique
 	 * @returns

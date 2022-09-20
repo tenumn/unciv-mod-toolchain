@@ -15,11 +15,11 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Unciv = void 0;
-const path_1 = require("path");
 const Registry_1 = require("./api/Registry");
 function Unciv(dataGen) {
     dataGen();
-    Registry_1.Registry.write((0, path_1.join)(__dirname, "..", "..", "jsons"));
+    Registry_1.emitter.emit("preload");
+    Registry_1.emitter.emit('write-json');
 }
 exports.Unciv = Unciv;
 __exportStar(require("./api/Belief"), exports);

@@ -7,6 +7,7 @@ export class Unique extends Registry {
 	}
 
 	/**
+	 * @zh
 	 * 添加特质
 	 * @param unique
 	 * @returns

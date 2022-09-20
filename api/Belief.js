@@ -4,6 +4,7 @@ exports.Belief = void 0;
 const Registry_1 = require("./Registry");
 class Belief extends Registry_1.Registry {
     /**
+     * @zh
      * 注册信仰
      * @param name
      * @param type
@@ -13,6 +14,7 @@ class Belief extends Registry_1.Registry {
         this.put("name", name).put("type", type);
     }
     /**
+     * @zh
      * 添加特质
      * @param unique
      * @returns

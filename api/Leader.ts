@@ -19,6 +19,7 @@ export class Leader extends Registry {
 	}
 
 	/**
+	 * @zh
 	 * 设置启动介绍
 	 * @param text1
 	 * @param text2
@@ -30,6 +31,7 @@ export class Leader extends Registry {
 	}
 
 	/**
+	 * @zh
 	 * 宣战信息
 	 * @param text
 	 * @returns
@@ -40,6 +42,7 @@ export class Leader extends Registry {
 	}
 
 	/**
+	 * @zh
 	 * 攻击信息
 	 * @param text
 	 * @returns
@@ -50,6 +53,7 @@ export class Leader extends Registry {
 	}
 
 	/**
+	 * @zh
 	 * 击败信息
 	 * @param text
 	 * @returns
@@ -60,6 +64,7 @@ export class Leader extends Registry {
 	}
 
 	/**
+	 * @zh
 	 * 介绍信息
 	 * @param text
 	 * @returns
@@ -70,6 +75,7 @@ export class Leader extends Registry {
 	}
 
 	/**
+	 * @zh
 	 * 设置问候信息
 	 * @param text
 	 * @returns
@@ -81,6 +87,7 @@ export class Leader extends Registry {
 	}
 
 	/**
+	 * @zh
 	 * 贸易请求
 	 * @param text
 	 * @returns
@@ -91,6 +98,7 @@ export class Leader extends Registry {
 	}
 
 	/**
+	 * @zh
 	 * 添加特质
 	 * @param unique
 	 * @returns

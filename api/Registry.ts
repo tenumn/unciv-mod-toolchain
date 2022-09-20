@@ -1,14 +1,15 @@
 import { join } from "path";
 import { writeFileSync, existsSync, mkdirSync } from "fs";
+import { EventEmitter } from "events";
 
-var _local: { [key: string]: any[] } = {};
+export var emitter = new EventEmitter();
 
-var _list: (() => void)[] = [];
+var _local: { [key: string]: any } = {};
 
 export class Registry {
 	constructor(name: string = "noWrite") {
 		this._name = name;
-		_list.push(() => {
+		emitter.on("preload", () => {
 			(_local[this._name] ??= []).push(this._json);
 		});
 	}
@@ -25,15 +26,15 @@ export class Registry {
 	public get(name?: string): any {
 		return typeof name == "string" ? this._json[name] : this._json;
 	}
+}
 
-	public static write(path: string) {
-		if (!existsSync(path)) mkdirSync(path);
-		for (let list of _list) list();
-		for (let i in _local) {
-			if (i != "noWrite") {
-				let json = JSON.stringify(_local[i], null, 4);
-				writeFileSync(join(path, `${i}.json`), json);
-			}
+emitter.on("write-json", () => {
+	let _path = join(__dirname, "..", "..", "..", "jsons");
+	if (!existsSync(_path)) mkdirSync(_path);
+	for (let name in _local) {
+		if (name != "noWrite") {
+			let _json = JSON.stringify(_local[name], null, 4);
+			writeFileSync(`${_path}/${name}.json`, _json);
 		}
 	}
-}
+});

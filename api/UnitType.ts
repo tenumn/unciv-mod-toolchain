@@ -11,6 +11,7 @@ export class UnitType extends Registry {
 	}
 
 	/**
+	 * @zh
 	 * 移动类型
 	 * @param type
 	 * @returns
@@ -21,6 +22,7 @@ export class UnitType extends Registry {
 	}
 
 	/**
+	 * @zh
 	 * 添加特质
 	 * @param unique
 	 * @returns

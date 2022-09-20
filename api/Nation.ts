@@ -7,6 +7,7 @@ export class NationColor extends Registry {
 	}
 
 	/**
+	 * @zh
 	 * 外色
 	 * @param rgb
 	 * @returns
@@ -17,6 +18,7 @@ export class NationColor extends Registry {
 	}
 
 	/**
+	 * @zh
 	 * 内色
 	 * @param rgb
 	 * @returns
@@ -36,6 +38,7 @@ export class Nation extends Registry {
 	}
 
 	/**
+	 * @zh
 	 * 种族
 	 * @param adjective
 	 * @returns
@@ -48,6 +51,7 @@ export class Nation extends Registry {
 	}
 
 	/**
+	 * @zh
 	 * 设置颜色
 	 * @param color
 	 */
@@ -58,13 +62,27 @@ export class Nation extends Registry {
 	}
 
 	/**
-	 * 添加城市
+	 * @zh
+	 * 添加城市名称
 	 * @param citie
 	 */
-	public addCitie(...citie: string[]): Nation {
-		let cities: string[] = this.get("cities") || [];
-		cities.push(...citie);
-		this.put("cities", cities);
+	public addCitieName(...citie: string[]): Nation {
+		let _data: string[] = this.get("cities") || [];
+		_data.push(...citie);
+		this.put("cities", _data);
+		return this;
+	}
+
+	/**
+	 * @zh
+	 * 添加间谍名称
+	 * @param spy 
+	 * @returns 
+	 */
+	public addSpyName(...spy: string[]): Nation {
+		let _data: string[] = this.get("spyNames") || [];
+		_data.push(...spy);
+		this.put("spyNames", _data);
 		return this;
 	}
 }

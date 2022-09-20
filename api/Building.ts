@@ -3,6 +3,7 @@ import { Registry } from "./Registry";
 
 export class Building extends Registry {
 	/**
+	 * @zh
 	 * 注册建筑
 	 * @param name
 	 */
@@ -12,6 +13,7 @@ export class Building extends Registry {
 	}
 
 	/**
+	 * @zh
 	 * 生产力消耗
 	 * @param cost
 	 * @returns
@@ -22,7 +24,8 @@ export class Building extends Registry {
 	}
 
 	/**
-	 * 文明独特建筑
+	 * @zh
+	 * 单一文明专属
 	 * @param leader
 	 */
 	public uniqueTo(leader: Leader | string): Building {
@@ -35,6 +38,7 @@ export class Building extends Registry {
 	}
 
 	/**
+	 * @zh
 	 * 是否是奇观
 	 * @param isWonder
 	 * @param isNational
@@ -50,6 +54,7 @@ export class Building extends Registry {
 	}
 
 	/**
+	 * @zh
 	 * 前置建筑
 	 */
 	public required(building: Building | string): Building {

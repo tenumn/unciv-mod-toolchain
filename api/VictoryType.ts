@@ -1,5 +1,12 @@
 import { Registry } from "./Registry";
 
+export declare type NativeVictoryType =
+	| "Scientific"
+	| "Cultural"
+	| "Domination"
+	| "Diplomatic"
+	| "Time";
+
 export class VictoryType extends Registry {
 	constructor(name: string) {
 		super("VictoryTypes");
@@ -7,6 +14,7 @@ export class VictoryType extends Registry {
 	}
 
 	/**
+	 * @zh
 	 * 设置胜利介绍
 	 * @param text
 	 * @returns
@@ -17,6 +25,7 @@ export class VictoryType extends Registry {
 	}
 
 	/**
+	 * @zh
 	 * 设置胜利条件
 	 * @param part
 	 * @returns
@@ -27,6 +36,7 @@ export class VictoryType extends Registry {
 	}
 
 	/**
+	 * @zh
 	 * 设置胜利信息
 	 * @param text
 	 * @returns
@@ -37,6 +47,7 @@ export class VictoryType extends Registry {
 	}
 
 	/**
+	 * @zh
 	 * 设置失败信息
 	 * @param text
 	 * @returns
@@ -47,6 +58,7 @@ export class VictoryType extends Registry {
 	}
 
 	/**
+	 * @zh
 	 * 是否在胜利选项中显示
 	 * @param isHidden
 	 * @returns
